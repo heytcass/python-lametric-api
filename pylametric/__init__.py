@@ -9,5 +9,5 @@ def send_notification(host, text, api_key):
     'Authorization': b'Basic ' + enc_api,
     'Cache-Control': 'no-cache',
      }
-    data = '{"priority": "warning", "icon_type": "none", "model": {"frames": [{$
+    data = '{"priority": "warning", "icon_type": "none", "model": {"frames": [{"icon": "i3579", "text":' + text + '}], "sound": {"category": "notifications", "id": "positive4"}}}'
     requests.post(noturl, headers=headers, data=data)
